@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  homestead_guardian:
+    image: ros:humble
+    container_name: homestead_guardian
+    command: ["bash", "-lc", "echo 'homestead_guardian workspace ready' && sleep infinity"]
+    volumes:
+      - ./src:/workspace/src
+    working_dir: /workspace
