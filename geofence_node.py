@@ -9,7 +9,6 @@ from datetime import datetime
 import os
 
 import rclpy
-from geometry_msgs.msg import Polygon as GeoPolygon
 from rclpy.node import Node
 from rclpy.qos import HistoryPolicy, QoSProfile, ReliabilityPolicy
 from sensor_msgs.msg import NavSatFix
