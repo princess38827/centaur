@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<robot name="satyress_guardian">
+  <material name="matte_black">
+    <color rgba="0.05 0.05 0.05 1.0"/>
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.4 0.2 0.7"/>
+      </geometry>
+      <material name="matte_black"/>
+    </visual>
+  </link>
+
+  <link name="left_antler_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.02" length="0.25"/>
+      </geometry>
+      <material name="matte_black"/>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+    </visual>
+  </link>
+
+  <link name="right_antler_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.02" length="0.25"/>
+      </geometry>
+      <material name="matte_black"/>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="left_antler_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_antler_link"/>
+    <origin xyz="0.1 0.07 0.7" rpy="0.2 0 0.4"/>
+  </joint>
+
+  <joint name="right_antler_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_antler_link"/>
+    <origin xyz="0.1 -0.07 0.7" rpy="-0.2 0 -0.4"/>
+  </joint>
+</robot>
